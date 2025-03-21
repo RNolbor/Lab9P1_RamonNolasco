@@ -5,6 +5,7 @@
 package lab9p1_ramonnolasco;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 /**
  *
@@ -23,7 +24,6 @@ public class Lab9P1_RamonNolasco {
         
         int opcion;
         
-        
         do {
             System.out.println("---------- MENU -----------");
             System.out.println("");
@@ -39,6 +39,7 @@ public class Lab9P1_RamonNolasco {
             switch ( opcion ) {
                 
                 case 1:
+                    
                     System.out.println("----- Conversiones Decimales -----");
                     System.out.println("Ingrese un numero: ");
                     int numero = input.nextInt();
@@ -47,24 +48,47 @@ public class Lab9P1_RamonNolasco {
                     System.out.println("    Numero binario = " + conversion.aBinario(numero));
                     System.out.println("    Numero octal = " + conversion.aOctal(numero));
                     System.out.println("    Numero hexadecimal = " + conversion.aHexadecimal(numero));
+                    System.out.println("");
                     
                     break;
                     
                 case 2:
                     
+                    System.out.println("----- Busqueda Binaria -----");
+                    System.out.println("Ingrese el tamanio del arreglo: ");
+                    int tamaño = input.nextInt();
+                    int[] arreglo = busqueda.crearArreglo(tamaño);
                     
+                    System.out.println("Arreglo de Busqueda Desordenado:");
+                    busqueda.imprimirArreglo(arreglo);                   
+                    busqueda.ordenarArreglo(arreglo);
+                    System.out.println("");
+                    System.out.println("Arreglo de Busqueda Ordenado:");
+                    busqueda.imprimirArreglo(arreglo);
+                    System.out.println("");
+                    System.out.println("Ingrese numero a buscar: ");
+                    numero = input.nextInt();
+                    
+                    int index = busqueda.busquedaBinaria(arreglo, numero);
+                    if (index == -1){
+                        System.out.println("No se encontro el elemento " + numero + " en el arreglo.");
+                    } else {
+                        System.out.println("El elemento " + numero + " se encontro en la posicion:4"
+                                + " " + index);                      
+                    }
                     
                     break;
                     
                 case 3:
                     
-                    
-                    
+                    System.out.println("Hola mundo");
                     
                     break;
                     
                 case 4:
+                    
                     System.out.println("Saliendo...");
+                    
                     break;
                     
             }
@@ -72,10 +96,7 @@ public class Lab9P1_RamonNolasco {
                        
         } while ( opcion != 4);
         
-        
-        
-        
-        
+             
     }
     
 }
