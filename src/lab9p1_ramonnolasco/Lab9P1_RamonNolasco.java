@@ -25,7 +25,7 @@ public class Lab9P1_RamonNolasco {
         int opcion;
         
         do {
-            System.out.println("---------- MENU -----------");
+            System.out.println("----------- MENU ------------");
             System.out.println("");
             System.out.println("1 - Conversiones Decimales");
             System.out.println("2 - Busqueda Binaria");
@@ -40,7 +40,7 @@ public class Lab9P1_RamonNolasco {
                 
                 case 1:
                     
-                    System.out.println("----- Conversiones Decimales -----");
+                    System.out.println("------ Conversiones Decimales ------");
                     System.out.println("Ingrese un numero: ");
                     int numero = input.nextInt();
                     
@@ -81,7 +81,7 @@ public class Lab9P1_RamonNolasco {
                     
                 case 3:
                     
-                    System.out.println("Hola mundo");
+                    System.out.println("Hola mundo perdi un punto");
                     
                     break;
                     
